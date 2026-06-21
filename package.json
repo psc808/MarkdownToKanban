@@ -1,0 +1,44 @@
+{
+  "name": "markdown-to-kanban",
+  "version": "1.0.0",
+  "description": "Markdown Kanban board desktop app",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "node server.js",
+    "electron": "electron .",
+    "build": "electron-builder --mac"
+  },
+  "devDependencies": {
+    "electron": "^34.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.pasc.markdown-to-kanban",
+    "productName": "Markdown Kanban",
+    "copyright": "Copyright © 2026 Markdown Kanban by https://github.com/psc808",
+    "mac": {
+      "icon": "build/icon.icns",
+      "category": "public.app-category.productivity",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "arm64",
+            "x64"
+          ]
+        }
+      ]
+    },
+    "files": [
+      "electron/**/*",
+      "public/**/*",
+      "tasks-template.md"
+    ],
+    "directories": {
+      "output": "dist"
+    }
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

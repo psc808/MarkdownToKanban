@@ -1,0 +1,15 @@
+# Build output
+dist/
+build/
+
+# Dependencies
+node_modules/
+
+# macOS
+.DS_Store
+
+# Archives
+*.zip
+
+# Local task files
+my-tasks.md
